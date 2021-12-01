@@ -19,5 +19,13 @@ namespace TechJobsOO
         }
 
         // TODO: Add custom Equals(), GetHashCode(), and ToString() methods.
+        PositionType position = new PositionType();
+        public string ToString(object position)
+        {
+            return position.ToString();
+            //return value of postionType object 
+        }
+
+
     }
 }
