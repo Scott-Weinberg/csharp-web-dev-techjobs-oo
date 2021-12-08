@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+
 namespace TechJobsOO
 {
     public class Job
@@ -13,11 +15,7 @@ namespace TechJobsOO
         public CoreCompetency JobCoreCompetency { get; set; }
 
         // TODO: Add the two necessary constructors.
-        public Job()
-        {
-            Id = nextId;
-            nextId++;
-        }
+       
         public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreComepetency) : this()
         { 
             Name = name;
@@ -26,11 +24,20 @@ namespace TechJobsOO
             JobType = jobType;
             JobCoreCompetency = jobCoreComepetency;
         }
-
+ public Job()
+        {
+            Id = nextId;
+            nextId++;
+        }
         public override bool Equals(object obj)
         {
             return obj is Job job &&
                    Id == job.Id;
+        }
+
+        public ICollection ToString(object name)
+        {
+            throw new NotImplementedException();
         }
 
         public override int GetHashCode()
