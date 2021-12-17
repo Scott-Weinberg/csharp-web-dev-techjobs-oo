@@ -7,7 +7,8 @@ namespace TechJobsOO
 {
     public class Job : JobFeild
     {
-    
+        public int Id { get; }
+        static private int nextId = 1;
         public string Name { get; set; }
         public Employer EmployerName { get; set; } 
         public Location EmployerLocation { get; set; }
@@ -23,6 +24,11 @@ namespace TechJobsOO
             EmployerLocation= employerLocation;
             JobType = jobType;
             JobCoreCompetency = jobCoreComepetency;
+        }
+        public Job()
+        {
+            Id = nextId;
+            nextId++;
         }
         public override string ToString()
         {
