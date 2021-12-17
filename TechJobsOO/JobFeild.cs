@@ -4,7 +4,19 @@ using System.Text;
 
 namespace TechJobsOO
 {
-    internal class JobFeild
+    public abstract class JobFeild
     {
+        public int Id { get; }
+        private static int nextId = 1;
+        public string Value { get; set; }
+        public JobFeild(string value)
+        {
+          Value = value;
+        }
+        public JobFeild()
+        {
+            Id = nextId;
+            nextId++;
+        }
     }
 }

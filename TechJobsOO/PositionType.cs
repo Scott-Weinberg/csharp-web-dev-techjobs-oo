@@ -1,29 +1,17 @@
 ﻿using System;
 namespace TechJobsOO
 {
-    public class PositionType
+    public class PositionType : JobFeild
     {
-        public int Id { get; }
-        private static int nextId = 1;
-        public string Value { get; set; }
-
-        public PositionType()
+        public PositionType(string value) : base(value)
         {
-            Id = nextId;
-            nextId++;
-        }
 
-        public PositionType(string value) : this()
-        {
-            Value = value;
         }
 
         // TODO: Add custom Equals(), GetHashCode(), and ToString() methods.
-        PositionType position = new PositionType();
-        public string ToString(object position)
+        public override string ToString()
         {
-            return position.ToString();
-            //return value of postionType object 
+            return Value;
         }
 
         public override bool Equals(object obj)
