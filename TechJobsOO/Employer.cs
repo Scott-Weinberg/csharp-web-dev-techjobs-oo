@@ -7,20 +7,6 @@ namespace TechJobsOO
         {
         }
 
-        public override bool Equals(object obj)
-        {
-            return obj is Employer employer &&
-                   Id == employer.Id;
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
-        }
-
-        public override string ToString()
-        {
-            return Value;
-        }
+       
     }
 }

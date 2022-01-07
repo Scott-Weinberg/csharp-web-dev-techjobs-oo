@@ -18,5 +18,21 @@ namespace TechJobsOO
             Id = nextId;
             nextId++;
         }
+
+        public override bool Equals(object obj)
+        {
+            return obj is JobFeild feild &&
+                   Id == feild.Id;
+                   
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id);
+        }
+     /*   public override string ToString()
+        {
+            return Value;
+        }*/
     }
 }

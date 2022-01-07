@@ -21,7 +21,7 @@ namespace TechJobsOO
             
              foreach (Job job in jobs)
             {
-                Console.WriteLine(job);
+                Console.WriteLine(job.ToString());
             }
 
             /*Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));*/

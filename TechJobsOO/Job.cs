@@ -7,8 +7,7 @@ namespace TechJobsOO
 {
     public class Job : JobFeild
     {
-        public int Id { get; }
-        static private int nextId = 1;
+     
         public string Name { get; set; }
         public Employer EmployerName { get; set; } 
         public Location EmployerLocation { get; set; }
@@ -27,50 +26,48 @@ namespace TechJobsOO
         }
         public Job()
         {
-            Id = nextId;
-            nextId++;
         }
         public override string ToString()
         {
 
             if (Name == "" || Name == null)
             {
-                Name = "Data not available ";
+                Name = "Data not available";
             }
 
             if (EmployerName.Value == "" || EmployerName.Value == null)
             {
-                EmployerName.Value = "Data not available ";
+                EmployerName.Value = "Data not available";
             }
 
             if (EmployerLocation.Value == "" || EmployerLocation.Value == null)
             {
-                EmployerLocation.Value = "Data not available ";
+                EmployerLocation.Value = "Data not available";
             }
 
             if (JobType.Value == "" || JobType.Value == null)
             {
-                JobType.Value = "Data not available ";
+                JobType.Value = "Data not available";
             }
 
             if (JobCoreCompetency.Value == "" || JobCoreCompetency.Value == null)
             {
-                EmployerLocation.Value = "Data not available ";
+                JobCoreCompetency.Value = "Data not available";
             }
             //string output 
-            return "Id: " + Id + " \n" +
-                "Name: " + Name + " \n" +
-                "Employer: " + EmployerName.Value + " \n" +
-                "Location: " + EmployerLocation + " \n" +
-                "Position: " + JobType.Value + " \n" +
-                "Core Competenecy: " + JobCoreCompetency.Value + " \n";
-                
+            return "\nId: " + Id + "\n" +
+                "\nName: " + Name + "\n" +
+                "\nEmployer: " + EmployerName.Value + "\n" +
+                "\nLocation: " + EmployerLocation.Value + "\n" +
+                "\nPosition: " + JobType.Value + "\n" +
+                "\nCore Competenecy: " + JobCoreCompetency.Value + "\n";
+
         }
-           
-            
-        
-    
- 
+
+
+
+
+
         public override bool Equals(object obj)
         {
             return obj is Job job &&
